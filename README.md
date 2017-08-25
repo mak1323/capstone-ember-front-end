@@ -14,6 +14,7 @@ Well if you want to know more about future releases, look on the following:
 ## Future Releases Wireframe and User Stories
 
 ### Wireframe
+
 The following is my wireframe:
 —Simple:
 https://goo.gl/photos/AEvq75s1U9XAwJ2Z6
