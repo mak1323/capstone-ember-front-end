@@ -1,0 +1,10 @@
+<div class="createCampaignDiv box">
+<h4>Start a new Campaign</h4>
+<form {{action 'createCampaign' on='submit'}}>
+  {{input
+    placeholder="New Campaign Name"
+    value=newCampaign.name
+  }}
+  <button type="submit">Start New Campaign &#9874;</button>
+</form>
+</div>

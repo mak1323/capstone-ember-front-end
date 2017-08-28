@@ -1,0 +1,10 @@
+<div class="editCampaignDiv box">
+<h4>Edit campaign name</h4>
+<form {{action 'editCampaign' on='submit'}}>
+  {{input
+    placeholder=campaign.name
+    value=campaign.name
+  }}
+  <button type="submit">&#9874;</button>
+</form>
+</div>

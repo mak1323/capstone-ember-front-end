@@ -1,0 +1,13 @@
+<h2>Campaigns</h2>
+
+<ul>
+{{#each model as |campaign|}}
+  {{campaign-elements/card
+    campaign=campaign
+    deleteCampaign='deleteCampaign'
+    editCampaign='editCampaign'
+  }}
+{{/each}}
+</ul>
+
+{{campaign-elements/create-campaign-form createCampaign='createCampaign'}}
