@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('campaigns');
+  this.route('campaign', { path: '/campaigns/:campaign_id'});
 });
 
 export default Router;
