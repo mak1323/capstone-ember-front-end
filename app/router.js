@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('users');
   this.route('campaigns');
   this.route('campaign', { path: '/campaigns/:campaign_id'});
+  this.route('edit-campaign', { path: '/campaigns/:campaign_id/edit-name'});
 });
 
 export default Router;
