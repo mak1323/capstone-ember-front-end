@@ -6,9 +6,11 @@ export default Ember.Route.extend({
   },
   actions: {
     createCampaign(campaign){
-      console.log(campaign)
-  let newCampaign = this.get('store').createRecord('campaign', campaign)
-  newCampaign.save()
-},
+      let newCampaign = this.get('store').createRecord('campaign', campaign)
+      newCampaign.save()
+    },
+    deleteCampaign(campaign) {
+      campaign.destroyRecord();
+    },
   }
 });

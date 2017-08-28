@@ -2,7 +2,7 @@
 
 <ul>
 {{#each model as |campaign|}}
-  <li>{{campaign.name}}</li>
+  {{campaign-elements/card campaign=campaign deleteCampaign='deleteCampaign'}}
 {{/each}}
 </ul>
 
