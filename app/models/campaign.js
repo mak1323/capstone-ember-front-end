@@ -3,5 +3,5 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   name: DS.attr('string'),
   completed: DS.attr('boolean'),
-  logs: DS.hasMany('campaign_log')
+  campaign_logs: DS.hasMany('campaign_log')
 });
