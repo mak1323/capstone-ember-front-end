@@ -1,0 +1,11 @@
+<h3>{{model.name}} Logs</h3>
+<ul>
+  {{#each model.campaign_logs as |log|}}
+  <li>{{log.title}}</li>
+    {{!-- {{shopping-campaign/item
+      log=log
+      toggleDone='toggleItemDone'
+      deleteItem='deleteItem'
+      }} --}}
+  {{/each}}
+</ul>
