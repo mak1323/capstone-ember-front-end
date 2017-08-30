@@ -5,9 +5,9 @@ export default Ember.Route.extend({
   return this.get('store').findRecord('campaign', params.campaign_id);
 },
   actions: {
-    createLog(campaign_log){
-      let newLog = this.get('store').createRecord('campaign_log', campaign_log);
-      newLog.save();
-    }
+    // createLog(campaign_log){
+    //   let newLog = this.get('store').createRecord('campaign_log', campaign_log);
+    //   newLog.save();
+    // }
   },
 });
