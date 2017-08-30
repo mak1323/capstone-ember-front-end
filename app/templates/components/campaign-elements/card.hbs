@@ -1,5 +1,5 @@
   <li>
-    {{campaign.name}}
+    {{#link-to 'campaign' campaign}}{{campaign.name}}{{/link-to}}
     <button class="crudbtn" {{action 'deleteCampaign'}}>&#9762;</button>
     {{#link-to 'edit-campaign' campaign}}<button class="crudbtn" >&#9881;</button>{{/link-to}}
   </li>

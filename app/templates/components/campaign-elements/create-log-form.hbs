@@ -1,0 +1,22 @@
+<div class="createLogDiv box">
+<h4>Start a new Log for {{campaign.name}}</h4>
+<form {{action 'createLog' on='submit'}}>
+  {{input
+    maxlength=50
+    placeholder="New Log title"
+    value=newLog.title
+  }}
+
+  {{!-- {{input
+  placeholder=campaign.id
+  value=newLog.campaign_id
+}} --}}
+
+  {{input class="log-input"
+    maxlength=255
+    placeholder="Brief Description of what happened."
+    value=newLog.log
+  }}
+  <button type="submit">Post New Log &#9874;</button>
+</form>
+</div>

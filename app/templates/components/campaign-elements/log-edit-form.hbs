@@ -1,0 +1,15 @@
+<div class="createLogDiv box">
+<h4>Read Current Log Update</h4>
+<form {{action 'updateLog' on='submit'}}>
+  {{input
+    maxlength=50
+    value=log.title
+  }}
+
+  {{input class="log-input"
+    maxlength=255
+    value=log.log
+  }}
+  <button type="submit">Update Log &#9874;</button>
+</form>
+</div>
