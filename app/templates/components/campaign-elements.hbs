@@ -1,3 +1,6 @@
 <h1 class="campaign-header">{{campaign.name}}</h1>
 
-{{#link-to 'logs' campaign}}<h2>Campaign Logs</h2>{{/link-to}}
+{{#link-to 'logs' campaign createLog='createLog'}}<h2>Campaign Logs</h2>{{/link-to}}
+{{!-- {{campaign-elements/create-log-form
+  campaign=model
+  createLog='createLog'}} --}}

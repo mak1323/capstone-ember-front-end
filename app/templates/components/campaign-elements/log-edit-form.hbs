@@ -1,0 +1,13 @@
+<div class="createLogDiv box">
+<h4>Read Current Log or Update</h4>
+<form {{action 'updateLog' on='submit'}}>
+  {{input
+    value=log.title
+  }}
+
+  {{input
+    value=log.log
+  }}
+  <button type="submit">Post New Log &#9874;</button>
+</form>
+</div>

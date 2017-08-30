@@ -1,6 +1,10 @@
 <h3>{{model.name}} Logs</h3>
 <ul>
   {{#each model.campaign_logs as |log|}}
-  <li>{{log.title}}</li>
+  {{#link-to 'log' log}}<li>{{log.title}}</li>{{/link-to}}
   {{/each}}
 </ul>
+
+{{campaign-elements/create-log-form
+  campaign=model
+  createLog='createLog'}}
