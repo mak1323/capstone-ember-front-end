@@ -2,10 +2,12 @@
 <h4>Read Current Log or Update</h4>
 <form {{action 'updateLog' on='submit'}}>
   {{input
+    maxlength=50
     value=log.title
   }}
 
   {{input
+    maxlength=255
     value=log.log
   }}
   <button type="submit">Post New Log &#9874;</button>

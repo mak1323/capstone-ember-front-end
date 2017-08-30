@@ -2,6 +2,7 @@
 <h4>Edit campaign name</h4>
 <form {{action 'editCampaign' on='submit'}}>
   {{input
+    maxlength=50
     placeholder=campaign.name
     value=campaign.name
   }}
