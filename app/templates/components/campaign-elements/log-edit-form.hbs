@@ -1,12 +1,12 @@
 <div class="createLogDiv box">
-<h4>Read Current Log or Update</h4>
+<h4>Read Current Log Update</h4>
 <form {{action 'updateLog' on='submit'}}>
   {{input
     maxlength=50
     value=log.title
   }}
 
-  {{input
+  {{input class="log-input"
     maxlength=255
     value=log.log
   }}

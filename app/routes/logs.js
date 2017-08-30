@@ -10,5 +10,11 @@ export default Ember.Route.extend({
       let newLog = this.get('store').createRecord('campaign_log', campaign_log);
       newLog.save();
     },
+    deleteLog(log) {
+      // console.log('log is', log)
+      log.destroyRecord();
+      this.transitionTo('campaign-elemets')
+
+    },
   }
 });

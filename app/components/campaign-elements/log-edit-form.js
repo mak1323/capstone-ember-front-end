@@ -5,5 +5,8 @@ export default Ember.Component.extend({
     updateLog() {
       this.sendAction('updateLog', this.get('log'))
     },
+    deleteLog() {
+      console.log(this.get('log'))
+    }
   },
 });

@@ -11,5 +11,9 @@ actions: {
     console.log(this.get('campaign'))
     // this.transitionTo('campaign')
 },
+deleteLog(log) {
+  console.log('here?')
+  // return this.sendAction('deleteLog', log)
+},
 }
 });

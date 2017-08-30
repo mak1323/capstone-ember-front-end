@@ -1,7 +1,12 @@
 <h3>{{model.name}} Logs</h3>
 <ul>
   {{#each model.campaign_logs as |log|}}
-  {{#link-to 'log' log}}<li>{{log.title}}</li>{{/link-to}}
+  {{campaign-elements/log-card
+    campaign=model
+    log=log
+    deleteLog='deleteLog'
+    }}
+  {{!-- {{#link-to 'log' log}}<li>{{log.title}}</li>{{/link-to}} --}}
   {{/each}}
 </ul>
 
