@@ -13,7 +13,7 @@ export default Ember.Route.extend({
     deleteLog(log) {
       // console.log('log is', log)
       log.destroyRecord();
-      this.transitionTo('campaign-elemets')
+      this.replaceWith('campaign-elemets')
 
     },
   }
