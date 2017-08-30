@@ -2,11 +2,12 @@
 
 module.exports = function (environment) {
   'use strict';
-  const ENV = {
-    modulePrefix: 'ga-wdi-boston.ember-auth',
+  var ENV = {
+    modulePrefix: 'capstone-ember-front-end',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -30,7 +31,7 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    let port = +('GA'.split('').reduce((p, c) =>
+    var port = +('GA'.split('').reduce((p, c) =>
       p + c.charCodeAt().toString(16), '')
     );
     ENV.apiHost = `http://localhost:${port}`;
@@ -49,7 +50,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/capstone-ember-front-end';
     ENV.locationType = 'hash';
+    ENV.apiHost = 'https://lit-taiga-59254.herokuapp.com'
   }
 
   return ENV;
