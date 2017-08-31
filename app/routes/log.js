@@ -7,13 +7,7 @@ export default Ember.Route.extend({
 actions: {
   updateLog(log) {
     log.save()
-    console.log(log)
-    console.log(this.get('campaign'))
-    // this.transitionTo('campaign')
-},
-deleteLog(log) {
-  console.log('here?')
-  // return this.sendAction('deleteLog', log)
+    this.get('flashMessages').success('Log updated.!')
 },
 }
 });

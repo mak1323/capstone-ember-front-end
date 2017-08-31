@@ -1,7 +1,40 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+body {
+  background-image:url(http://i.imgur.com/SpMCZzG.jpg);
+  background-size: cover;
+  font-family: 'Architects Daughter', cursive;
+}
 // Only use for debugging, delete after
-* {
-  background-color: rgba(0,0,0,.1);
+.logo {
+  width:30px;
+  height:30px;
+}
+
+#navigation {
+  background-color: #000;
+  font-family: 'Sedgwick Ave', cursive;
+}
+.navbar-brand {
+  background-color: #000;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.label-name {
+  color: #FFF;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.navbar-header {
+    background-color: #000;
+}
+
+.crudbtn {
+  background-color: inherit;
+  border: none;
+  color: #fff;
 }
