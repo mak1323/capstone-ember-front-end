@@ -11,5 +11,5 @@ export default ApplicationAdapter.extend({
   const data = {campaign_log: serialized}
   console.log('data is', data)
   return this.ajax(url, 'POST', {data})
-  }
+},
 });
