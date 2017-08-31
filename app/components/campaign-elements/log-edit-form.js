@@ -2,8 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    updateLog() {
-      this.sendAction('updateLog', this.get('log'))
-    }
+  //   updateLog() {
+  //       console.log('working', this.get('log'))
+  // //     this.sendAction('updateLog', this.get('log'))
+  //   }
   },
 });
