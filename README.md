@@ -12,6 +12,18 @@ Not very exciting, huh?
 Screenshot:
 http://i.imgur.com/heCs7P9.png
 
+Deployed:
+https://mak1323.github.io/capstone-ember-front-end/
+
+Repo:
+https://github.com/mak1323/capstone-ember-front-end
+
+Backend Deployed:
+https://lit-taiga-59254.herokuapp.com/
+
+Backend Repo:
+https://github.com/mak1323/capstone-rails-api
+
 Well if you want to know more about future releases, look on the following:
 
 ## Future Releases Wireframe and User Stories
