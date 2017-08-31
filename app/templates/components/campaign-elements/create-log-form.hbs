@@ -3,7 +3,7 @@
 <form {{action 'createLog' on='submit'}}>
   {{input
     maxlength=50
-    placeholder="New Log title"
+    placeholder="Sample Log Titile 2017-05-06"
     value=newLog.title
   }}
 
@@ -12,7 +12,7 @@
   value=newLog.campaign_id
 }} --}}
 
-  {{input class="log-input"
+  {{input class="log-input text-field"
     maxlength=255
     placeholder="Brief Description of what happened."
     value=newLog.log

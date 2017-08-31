@@ -15,10 +15,8 @@ Router.map(function () {
   this.route('campaign', { path: '/campaigns/:campaign_id'});
   this.route('edit-campaign', { path: '/campaigns/:campaign_id/edit-name'});
   // this.route('logs');
-  this.route('logs', { path: '/campaigns/:campaign_id/logs'}, function () {
-   this.route('log', { path: '/campaigns/:campaign_id/logs/:campaign_log_id'});
-  });
-  // this.route('log', { path: '/campaigns/:campaign_id/logs/:campaign_log_id'});
+  this.route('logs', { path: '/campaigns/logs/:campaign_id'});
+  this.route('log', { path: '/campaigns/logs/:campaign_log_id'});
 });
 
 export default Router;
