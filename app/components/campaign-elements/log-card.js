@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     },
     updateLog() {
       this.sendAction('updateLog', this.get('log'))
+      const log = this.get('log')
+      const modalShutDown = log.id + 'editModal'
+      $('.modal').modal('hide')
     },
   }
 });
