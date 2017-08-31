@@ -7,12 +7,14 @@ export default Ember.Route.extend({
   actions: {
     createLog(campaign_log){
       let newLog = this.get('store').createRecord('campaign_log', campaign_log);
-      newLog.save();
-      this.get('flashMessages').success('Log is born!')
+      newLog.save()
+        .then(()=>this.get('flashMessages').success('Log is born!'))
+        .catch(()=>this.get('flashMessages').danger('Something went wrong.'))
     },
     deleteLog(log) {
-      log.destroyRecord();
-      this.get('flashMessages').success('Log is murdered!')
+      log.destroyRecord()
+      .then(()=>this.get('flashMessages').success('Log is murdered.!'))
+      .catch(()=>this.get('flashMessages').danger('Something went wrong.'))
 
     },
     updateLog(log) {

@@ -8,12 +8,13 @@ export default Ember.Route.extend({
     createCampaign(campaign){
       let newCampaign = this.get('store').createRecord('campaign', campaign)
       newCampaign.save()
-            .then(() => this.get('flashMessages').success('New Campaign ready to go!'))
-
+        .then(() => this.get('flashMessages').success('New Campaign ready to go!'))
+        .catch(()=>this.get('flashMessages').danger('Something went wrong.'))
     },
     deleteCampaign(campaign) {
       campaign.destroyRecord()
-      this.get('flashMessages').success('Campaign and all contents deleted.')
+        .then(()=>this.get('flashMessages').success('Campaign and all contents deleted.'))
+        .catch(()=>this.get('flashMessages').danger('Something went wrong.'))
     },
   }
 });
