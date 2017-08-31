@@ -38,3 +38,21 @@ body {
   border: none;
   color: #fff;
 }
+
+.btn-modal{
+  backface-visibility: hidden;
+  background-color: inherit;
+  border: none;
+  color: #444;
+}
+
+.btn-modal:hover {
+  color: #88f;
+}
+
+.btn-worker {
+  background-color: rgba(100,100,100,.8);
+  color: #FFF;
+  border-color: #000;
+
+}
