@@ -9,4 +9,9 @@
   }}
 {{/each}}
 </ul>
+{{#each model.nouns as |noun|}}
+  {{campaign-elements/card
+    noun=noun
+  }}
+{{/each}}
 {{campaign-elements/create-campaign-form createCampaign='createCampaign'}}

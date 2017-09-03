@@ -18,8 +18,8 @@ actions: {
     // this.set('newCampaign.name', null)
   }
   },
-  // generateRandomCampaign() {
-  //   console.log('working')
-  // }
+  generateRandomCampaign() {
+    console.log('working')
+  }
 },
 });
