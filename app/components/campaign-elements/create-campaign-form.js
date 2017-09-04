@@ -20,6 +20,8 @@ actions: {
   },
   generateRandomCampaign() {
     console.log('working')
+    const nouns = this.get('noun')
+    console.log(nouns)
   }
 },
 });

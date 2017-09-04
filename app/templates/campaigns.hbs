@@ -1,7 +1,7 @@
 <h2>Campaigns</h2>
 
 <ul>
-{{#each model as |campaign|}}
+{{#each model.campaign as |campaign|}}
   {{campaign-elements/card
     campaign=campaign
     deleteCampaign='deleteCampaign'
@@ -9,9 +9,42 @@
   }}
 {{/each}}
 </ul>
-{{#each model.nouns as |noun|}}
-  {{campaign-elements/card
-    noun=noun
-  }}
+
+<ul>
+{{#each model.nouns.nouns as |noun|}}
+<li id="{{noun.id}}noun" class="hidden" value="{{noun.word}}"></li>
 {{/each}}
+</ul>
+
+<ul>
+{{#each model.adjectives.adjectives as |adjective|}}
+<li id="{{adjective.id}}adjective" class="hidden" value="{{adjective.word}}"></li>
+{{/each}}
+</ul>
+
+<div class="modal fade" id="suggestionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form {{action 'updateLog' on='submit'}}>
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{log.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{input
+          maxlength=50
+          value=log.title
+        }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-modal" data-dismiss="modal" >Close</button>
+          <button type="submit" class="btn btn-secondary btn-modal">Use suggestion</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
 {{campaign-elements/create-campaign-form createCampaign='createCampaign'}}
