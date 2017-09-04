@@ -2,9 +2,12 @@
 <h4>Start a new Campaign</h4>
 <form {{action 'createCampaign' on='submit'}}>
   {{input
+    id="newCampaignInput"
     placeholder="New Campaign Name"
     value=newCampaign.name
   }}
   <button type="submit" class="btn-worker">Start New Campaign &#9874;</button>
+  <button type="button" class="btn-worker" {{action 'generateRandomCampaign' on='click'}}>Random Suggestion &#9874;</button>
 </form>
+
 </div>

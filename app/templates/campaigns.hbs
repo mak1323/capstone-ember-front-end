@@ -1,7 +1,7 @@
 <h2>Campaigns</h2>
 
 <ul>
-{{#each model as |campaign|}}
+{{#each model.campaign as |campaign|}}
   {{campaign-elements/card
     campaign=campaign
     deleteCampaign='deleteCampaign'
@@ -9,5 +9,18 @@
   }}
 {{/each}}
 </ul>
+
+{{!-- <ul> --}}
+{{#each model.nouns.nouns as |noun index|}}
+<input id="{{index}}noun" class="hidden" value="{{noun.word}}">
+{{/each}}
+{{!-- </ul> --}}
+
+{{!-- <ul> --}}
+{{#each model.adjectives.adjectives as |adjective index|}}
+<input id="{{index}}adjective" class="hidden" value="{{adjective.word}}">
+{{/each}}
+{{!-- </ul> --}}
+
 
 {{campaign-elements/create-campaign-form createCampaign='createCampaign'}}
