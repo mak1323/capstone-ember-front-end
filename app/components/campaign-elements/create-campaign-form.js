@@ -22,7 +22,7 @@ actions: {
       return
     } else {
     this.sendAction('createCampaign', campaign)
-    // this.set('newCampaign.name', null)
+    this.set('newCampaign.name', null)
   }
   },
   generateRandomCampaign() {
@@ -41,12 +41,16 @@ actions: {
       'The Ladies of the',
       'The Monks of the',
       'The Crapfest that is the',
-      'A Magical Journey of the'
+      'A Magical Journey of the',
+      'The Knights of the',
+      'One Thousand and One Nights at the',
+      'Murder of the',
+      'A Dark Meeting at the'
     ]
 
     const numOne = Math.floor(Math.random() * 154) + 'adjective'
     const numTwo = Math.floor(Math.random() * 154) + 'noun'
-    const numThree = Math.floor(Math.random() * 14)
+    const numThree = Math.floor(Math.random() * 19)
     console.log('numOne', numOne)
     console.log('numTwo', numTwo)
     console.log(document.getElementById(numOne).value)
