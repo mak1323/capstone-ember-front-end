@@ -3,11 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model () {
     const writerApi =  'https://pure-tundra-23985.herokuapp.com/';
-    const data = new Ember.RSVP.hash({
-      campaign: this.get('store').findAll('campaign'),
-      adjectives: Ember.$.ajax({ url: writerApi + 'adjectives', dataType: 'json', type: 'GET' }),
-      nouns: Ember.$.ajax({ url: writerApi + 'nouns', dataType: 'json', type: 'GET' })
-    })
     return new Ember.RSVP.hash({
       campaign: this.get('store').findAll('campaign'),
       adjectives: Ember.$.ajax({ url: writerApi + 'adjectives', dataType: 'json', type: 'GET' }),
@@ -16,7 +11,6 @@ export default Ember.Route.extend({
   },
   actions: {
     createCampaign (campaign) {
-      console.log('campaign is', campaign)
       let newCampaign = this.get('store').createRecord('campaign', campaign);
       newCampaign.save()
         .then(() => this.get('flashMessages').success('New Campaign ready to go!'))

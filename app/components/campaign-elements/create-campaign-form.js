@@ -12,10 +12,6 @@ actions: {
       completed: false
     }
     campaign.name = document.getElementById('newCampaignInput').value
-    console.log('campaign is', campaign)
-    // let campaign = this.get('newCampaign')
-    // this.set('campaign.name', document.getElementById('newCampaignInput').value)
-    // console.log('campaign is',campaign)
     if(!campaign.name){
       this.get('flashMessages')
       .danger('Making a mistake with that blank campaign. Fool')
@@ -51,14 +47,8 @@ actions: {
     const numOne = Math.floor(Math.random() * 154) + 'adjective'
     const numTwo = Math.floor(Math.random() * 154) + 'noun'
     const numThree = Math.floor(Math.random() * 19)
-    console.log('numOne', numOne)
-    console.log('numTwo', numTwo)
-    console.log(document.getElementById(numOne).value)
-    console.log(document.getElementById(numTwo).value)
     const adjective = document.getElementById(numOne).value
     const noun = document.getElementById(numTwo).value
-    console.log(this.get('noun.1'))
-    console.log(this.get('noun.1'))
     document.getElementById('newCampaignInput').value = fun[numThree] + ' ' + adjective + ' ' + noun
     // newCampaign.name = fun[numThree] + ' ' + adjective + ' ' + noun
   }
